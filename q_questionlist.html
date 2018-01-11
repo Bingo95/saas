@@ -1,0 +1,98 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>建材系统答疑</title>
+		<link rel="stylesheet" type="text/css" href="s_css/weui/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/pub.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/q_question.css" />
+	</head>
+
+	<body>
+		<div class="weui-tab cont_dispy_none">
+			<!--nav-->
+			<div class="weui-navbar">
+				<div class="weui-flex width_all">
+					<div class="weui-search-bar width_all" id="searchBar">
+						<form class="weui-search-bar__form">
+							<div class="weui-search-bar__box">
+								<i class="weui-icon-search"></i>
+								<input type="search" class="weui-search-bar__input" id="searchInput" placeholder="输入问题" required="">
+							</div>
+							<label class="weui-search-bar__label" id="searchText">
+      						<i class="weui-icon-search"></i><span>搜索问题</span></label>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!--list-->
+			<div class="weui-tab__bd">
+				<div class="weui-tab__bd-item weui-tab__bd-item--active mag_top_-13p">
+					<div class="weui-cells__title often_FQA">常见问题</div>
+					<div class="circle-list">
+
+					</div>
+				</div>
+			</div>
+			<!--tabbar-->
+			<div class="weui-tabbar">
+				<div class="weui-flex width_all">
+					<div class="weui-flex__item">
+						<div id="ask_btn" class="btn_bottom">立即提问</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--next-->
+		<div id="ask_page" class="weui-popup__container" style="z-index: 1000;">
+			<div class="weui-popup__overlay"></div>
+			<div class="weui-popup__modal">
+				<div class="weui-tab">
+					<!--nav-->
+					<div class="weui-navbar posit_flix">
+						<div class="weui-flex width_all">
+							<label class="padding_10p">请输入您的问题</label>
+						</div>
+					</div>
+					<!--content-->
+					<div class="weui-tab__bd">
+						<div class="weui-tab__bd-item weui-tab__bd-item--active">
+							<div class="weui-cells weui-cells_form mag_top_0">
+								<div class="weui-cell">
+									<div class="weui-cell__bd">
+										<textarea id="feedback_content" class="weui-textarea" placeholder="" rows="3" maxlength="200"></textarea>
+										<div class="weui-textarea-counter"><span class="textarea_num">0</span>/200</div>
+									</div>
+								</div>
+							</div>
+							<div class="weui-cells__title mag_top_dow10"></div>
+							<div class="weui-cells">
+								<div class="weui-cell">
+									<div class="weui-cell__bd">
+										<input id="user_tel" class="weui-input" type="tel" pattern="[0-9]*" maxlength="11" placeholder="联系方式">
+									</div>
+								</div>
+							</div>
+							<div class="padding_15">
+								<a id="send_data" href="javascript:feedback_param();" class="weui-btn weui-btn_primary">发送</a>
+								<a href="javascript:;" class="weui-btn weui-btn_default close-popup">关闭</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<label class="cont_dispy_none questin_title">建材系统常见问题</label>
+	</body>
+	<!--jquery+weui-->
+	<script src="s_js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/q_question_pub.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/q_questionlist.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/jweixin-1.2.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/q_question_share.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

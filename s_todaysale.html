@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>营业报表明细</title>
+
+		<link rel="stylesheet" type="text/css" href="s_css/weui/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/s_report_cart.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/pub.css"/>
+
+	</head>
+  
+	<body>
+		<div class="weui-panel">
+			<div class="weui-media-box padding_10">
+				<div class="weui-form-preview__bd">
+					<div class="weui-form-preview__item">
+						<label class="weui-form-preview__label">今日销售：</label>
+						<div class="weui-form-preview__value"><label id="today_sale">-</label><span class='unit_style'>元</span></div>
+
+					</div>
+					<div class="weui-form-preview__item">
+						<label class="weui-form-preview__label">今日毛利：</label>
+						<div class="weui-form-preview__value"><label id="today_profit">-</label><span class='unit_style'>元</span></div>
+					</div>
+					<div class="weui-form-preview__item">
+						<label class="weui-form-preview__label">累计销售：</label>
+						<div class="weui-form-preview__value text_black">
+							<a id="all_sale">-</a><span class='unit_style'>元</span></div>
+					</div>
+
+				</div>
+			</div>
+			<div class="weui-media-box padding_10">
+				<div class="weui-form-preview__bd"> 
+					<div class="weui-form-preview__item">
+						<label class="weui-form-preview__label">今日收款：</label>
+						<span class="weui-form-preview__value"><label id="today_money">-</label><span class='unit_style'>元</span></span>
+					</div>
+					<div class="weui-form-preview__item">
+						<label class="weui-form-preview__label">累计收款：</label>
+						<div class="weui-form-preview__value">
+							<a id="all_money">-</a><span class='unit_style'>元</span></div>
+					</div>
+
+				</div>
+			</div>
+			<div class="weui-media-box"> 
+				<div class="weui-form-preview__bd">
+					<div class="weui-form-preview__item">
+						<label class="weui-form-preview__label">未出库：</label>
+						<div class="weui-form-preview__value">
+							<a id="no_out">-</a><span class='unit_style'>单</span></div>
+					</div>
+					<div class="weui-form-preview__item">
+						<label class="weui-form-preview__label">有出库：</label>
+						<div class="weui-form-preview__value">
+							<a id="exist_out">-</a><span class='unit_style'>单</span></div>
+					</div>
+					<div class="weui-form-preview__item">
+						<label class="weui-form-preview__label">出库完：</label>
+						<div class="weui-form-preview__value"><label id="all_out">-</label><span class='unit_style'>单</span></div>
+					</div>
+
+				</div>
+			</div>
+			<div class="weui-panel__ft btn_mag">
+				<a href="s_employee_sale.html" class="weui-btn weui-btn_plain-primary">业绩分析</a>
+				<a id="from_url_btn" class="weui-btn weui-btn_primary">进入系统</a>
+			</div>
+		</div>
+	</body>
+	<script src="s_js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/m_todaysale.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/m_report_pub.js" type="text/javascript" charset="utf-8"></script>
+</html>

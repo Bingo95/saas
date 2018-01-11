@@ -1,0 +1,315 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>售货车</title>
+		<link rel="stylesheet" type="text/css" href="s_css/weui/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/sales_style.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/pub.css" />
+	</head>
+	<style>
+
+	</style>
+
+	<body>
+		<!--tab-->
+		<div class="weui-tab">
+			<!--nav-->
+			<div class="weui-navbar merchant_nav_fixed">
+				<div class="weui-flex width_all">
+					<div class="weui-flex__item">
+						<img id="back_shop" class="merchant_nav_back mian_list" src="img/pub_back.png" />
+					</div>
+					<div class="weui-flex__item merchant_nav_title2 mag_btm_5p mian_list">
+						<label class="mag_lt_10 back_home">主目录</label>
+					</div>
+					<div class="">
+						<a id="shop_empty" class="weui-btn weui-form-preview__btn text_color_price text_size_15">清空</a>
+					</div>
+				</div>
+			</div>
+			<!--list-->
+			<div class="weui-tab__bd">
+				<div class="weui-tab__bd-item weui-tab__bd-item--active mag_top_-13p">
+					<!--填充-->
+					<div class="shop_list_content list_bottom">
+						<!--<div class='weui-panel shop_conte_top'>
+							<div class='weui-media-box__desc shop_margin'>
+								<div class='weui-flex'>
+									<div id='del' class=" mag_auto" style="width: 25px;">
+										<label class="delete shop_list_del">X</label>
+									</div>
+									<div class="weui-flex__item">
+										<div class="weui-flex">
+											<span class="text_color_gray">产品编码：</span>
+											<label id="prodcode" class="text_color_black">1212121212</label>
+										</div>
+										<div class="weui-flex text_size_14 mag_top_5">
+											<div class="weui-flex__item">
+												<span>规格:</span>
+												<label id="prodspecs" class="prodspecs detail_text_rt text_color_black">12121</label>
+											</div>
+											<div class="weui-flex__item">
+												<span>品牌:</span>
+												<label id="prodbrand" class="prodbrand detail_text_rt text_color_black">12121</label>
+											</div>
+											<div class="weui-flex__item">
+												<span>系列:</span>
+												<label id="prodseries" class="prodseries detail_text_rt text_color_black">121212</label>
+											</div>
+										</div>
+										<div class="weui-flex text_size_13 mag_top_5">
+											<div class="weui-flex__item">
+												色号：<input id="" type="text" class="popup_input" />
+											</div>
+											<div class="weui-flex__item">
+												<div class="dbstor_mag">仓位：</div>
+												<label id="" class="popup_input select_lable select_data_show"></label>
+												<select id="" class="select_own select_a_option">
+													<option></option>
+													<option>123</option>
+													<option>23456</option>
+													<option>1111</option>
+													<option>123333</option>
+													<option>aaaa</option>
+													<option>1bbb23</option>
+												</select>
+											</div>
+										</div>
+										<div class="weui-flex mag_top_5">
+											<div class="weui-flex__item ">
+												单价：<input id="price" type="text" pattern="[0-9]*" class="price popup_input" />
+											</div>
+											<div class="weui-flex__item">
+												折扣：<input id="discount" type="text" pattern="[0-9]*" value="100" class="discount popup_input width_55" />%
+											</div>
+										</div>
+										<div class="weui-flex mag_top_5">
+											<div class="weui-flex weui-flex__item ">
+												<div class="mag_top_2p">数量：</div>
+												<i id="remove" class="detail_remove lower"></i>
+												<input id="sale_number" type="tel" pattern="[0-9]*" class="num detail_input detail_width_30 text_size_15" value="1" />
+												<i id="addOne" class="detail_add add detail_magrin_right"></i>
+												<div class="mag_top_2p">片</div>
+											</div>
+											<div class="weui-flex__item mag_top_2p">
+												金额：<label id="detail_price" type="text" class="all_price text_color_black mag_rt_5p">1121</label>元
+											</div>
+										</div>
+										<div class="weui-flex mag_top_5">
+											<div class="weui-flex__item ">
+												<label class="float_lt mag_top_5">备注：</label>
+												<div class="select_other_box">
+													<input id="other" type="text" class="popup_input select_data_show other_input_select" />
+
+													<img id="other_select" src="img/arrow_dow.png" class="select_other_img" />
+
+													<select id="other_select_list" class="other_box_select select_a_option">
+														<option>123</option>
+														<option>23456</option>
+														<option>1111</option>
+														<option>123333</option>
+														<option>aaaa</option>
+														<option>1bbb23</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					-->
+					</div>
+
+				</div>
+			</div>
+			<!--tabbar-->
+			<div class="weui-tabbar">
+				<div class="weui-flex">
+					<div class="weui-flex__item detail_center detail_magrin_auto">
+						<div class="tabber_price">
+							<label>总金额：</label><label id="totalmoney_sum">0</label>元
+						</div>
+					</div>
+				</div>
+				<span class="weui-tabbar__item"></span>
+				<div class="weui-form-preview__ft">
+					<a id="shop_next_from" class="weui-form-preview__btn weui-form-preview__btn_primary btn_add">&nbsp;下一步（<span id="sum_list">0</span>）</a>
+				</div>
+			</div>
+		</div>
+		<!--next-->
+		<div id="shop_next_page" class="weui-popup__container">
+			<div class="weui-popup__overlay"></div>
+			<div class="weui-popup__modal next_bag">
+				<div class="weui-panel">
+					<div class="weui-media-box padding_10p">
+						<div class="weui-flex text_size_15">
+							<div class="weui-flex__item">
+								<label class="text_color_gray">总金额:</label>
+								<span id="totalmoney"></span><span class="next_unit"></span>
+							</div>
+							<div class="weui-flex__item">
+								<label class="text_color_gray">优惠:</label>
+								<input id="reducemoney" type="text" class="detail_center next_low_price" value="0" onkeyup="clearNoNum_2(this)" ><span class="next_unit"></span>
+							</div>
+							<div class="weui-flex__item">
+								<label class="text_color_gray">结算:</label>
+								<span id="lastmoney">0</span><span class="next_unit"></span>
+							</div>
+						</div>
+					</div>
+					<div class="weui-cells weui-cells_form padding_5 text_color_gray text_size_15">
+						<div class="weui-flex">
+							<label class="float_lt">客户名称：</label>
+							<div class="man_box">
+								<input id="custname" type="text" class="popup_input man_box_input" maxlength="20"/>
+								<div id="perp_cut" class="man_box_img">
+									<img id="other_select" src="img/arrow_dow.png" class="man_img_pad" />
+								</div>
+							</div>
+						</div>
+						<div class="weui-flex mag_top_5">
+							<label>客户地址：</label><input id="custaddress" type="text" class="popup_input popup_input_addw"  maxlength="30"/>
+						</div>
+						<div class="weui-flex mag_top_5">
+							<label>客户电话：</label><input id="custtel" type="text" pattern="[0-9]*" class="popup_input popup_input_addw" maxlength="30"/>
+						</div>
+						<div class="weui-flex mag_top_5">
+							<div class="weui-flex__item">
+								<div class="next_list_title">销售类型：</div>
+								<label id="ordertype_text" class="select_cart_span select_data_show"></label>
+								<select id="dbordertype" class="select_cart select_a_option">
+									<option></option>
+								</select>
+							</div>
+							<div class="weui-flex__item">
+								<div class="next_list_title">销单品牌：</div>
+								<label id="dborderbrand_text" class="select_cart_span select_data_show"></label>
+								<select id="dborderbrand" class="select_cart select_a_option">
+									<option></option>
+								</select>
+							</div>
+						</div>
+						<div class="weui-flex mag_top_5">
+							<div class="weui-flex__item">
+								<div class="next_list_title">门店：</div>
+								<label id="dbshop_text" class="select_cart_span select_data_show"></label>
+								<select id="dbshop" class="select_cart select_a_option">
+									<option></option>
+								</select>
+							</div>
+							<div class="weui-flex__item">
+								<div class="next_list_title">营销：</div>
+								<label id="dbemployeename_text" class="select_cart_span select_data_show"></label>
+								<select id="dbemployeename" class="select_cart select_a_option">
+									<option></option>
+								</select>
+							</div>
+						</div>
+						<div class="weui-flex mag_top_5">
+							<div class="weui-flex__item">
+								<div class="next_list_title">经办：</div>
+								<label id="dbrepairname_text" class="select_cart_span select_data_show"></label>
+								<select id="dbrepairname" class="select_cart select_a_option">
+									<option></option>
+								</select>
+							</div>
+							<div class="weui-flex__item">
+								<div class="next_list_title">设计：</div>
+								<input id="designer" class="select_cart_span" maxlength="15" type="text"></input>
+							</div>
+						</div>
+						<div class="weui-flex mag_top_5">
+							<div class="weui-flex__item">
+								<div class="next_list_title">项目经理：</div>
+								<input id="n1" class="select_cart_span" type="text" maxlength="15"></input>
+							</div>
+							<div class="weui-flex__item">
+								<div class="next_list_title">现场联系：</div>
+								<input id="n2" class="select_cart_span" type="text" maxlength="15"></input>
+							</div>
+						</div>
+						<div class="weui-flex mag_top_5">
+							<div class="weui-flex__item">
+								<div class="next_list_title">送货日期：</div>
+								<label class="senddate cont_dispy_none"></label>
+								<label id="senddate" class="select_cart_span text_size_13"></label>
+							</div>
+							<div class="weui-flex__item">
+								<div class="next_list_title">送货时间：</div>
+								<label id="sendtime" class="select_cart_span select_data_show"></label>
+								<select id="" class="select_cart select_a_option">
+									<option></option>
+									<option>上午</option>
+									<option>下午</option>
+								</select>
+							</div>
+						</div>
+						<div class="weui-flex mag_top_5">
+							<label>备注：</label>
+							<input id="orderothers_cust" class="popup_input popup_input_addw other_left" maxlength="80"/>
+						</div>
+
+					</div>
+				</div>
+				<div class="weui-flex next_btn_mag">
+					<div class="weui-flex__item next_btn_rt">
+						<a id="save_all" class="weui-btn weui-btn_primary">保存</a>
+					</div>
+					<div class="weui-flex__item">
+						<a id="exit" class="weui-btn weui-btn_default close-popup close_next">返回</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--搜索-->
+		<div id="cust_man" class="weui-popup__container">
+			<div class="weui-popup__overlay"></div>
+			<div class="weui-popup__modal next_bag">
+				<div class="weui-panel">
+					<div class="search_box">
+						<div class="weui-search-bar" id="searchBar">
+							<form class="weui-search-bar__form">
+								<div class="weui-search-bar__box">
+									<i class="weui-icon-search"></i>
+									<input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+									<a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+								</div>
+								<label class="weui-search-bar__label" id="searchText" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">
+          							<i class="weui-icon-search"></i>
+          							<span>搜索</span>
+       							</label>
+							</form>
+						</div>
+					</div>
+					<div class="weui-cells weui-cells_form padding_5 text_color_gray text_size_13">
+						<ul id="search_list_content" class="circle-list">
+							<!--<li>
+								<h2>地址</h2>
+								<p>132135431313 电话</p>
+							</li>-->
+						</ul>
+					</div>
+				</div>
+				<div class="weui-flex next_btn_mag">
+					<div class="weui-flex__item">
+						<a id="" class="weui-btn weui-btn_default close_sou">返回</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!--jquery+weui-->
+	<script src="s_js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/weui/weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--js-->
+	<script src="s_js/m_report_pub.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/m_salecart.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

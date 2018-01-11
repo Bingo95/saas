@@ -1,0 +1,224 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>销售明细</title>
+		<link rel="stylesheet" type="text/css" href="s_css/weui/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/sales_style.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/pub.css" />
+
+	</head>
+	<style type="text/css">
+		.weui-navbar+.weui-tab__bd {
+			padding-top: 38px;
+		}
+	</style>
+
+	<body>
+		<div class="weui-tab cont_dispy_none">
+			<!--nav-->
+			<div class="weui-navbar">
+				<div class="weui-flex width_all">
+					<div class="weui-flex__item merchant_nav_title2 mag_btm_5p text_align_center">
+						<label class="back_home">主目录</label>
+					</div>
+				</div>
+			</div>
+			<!--content-->
+			<div class="weui-tab__bd text_size_14">
+				<div class="weui-tab__bd-item weui-tab__bd-item--active">
+					<div id="detail_content" class="text_color_black posit_relat">
+						<div class="weui-flex">
+							<div class="weui-flex__item">
+								<label id="ordercode"></label>
+							</div>
+							<div class="weui-flex__item">
+								<div class="float_rt">
+									<label id="costmoney"></label>-<label id="reducemoney"></label>=<label id="totalmoney" class="text_color_price"></label><label class="text_color_gray">元</label>
+								</div>
+							</div>
+						</div>
+						<div class="weui-flex">
+							<span>客户名称</span>
+							<div class="detail_cut_div">
+								<label id="custname"></label>
+							</div>
+						</div>
+						<div class="weui-flex">
+							<span>客户地址</span>
+							<div class="detail_cut_div">
+								<label id="custaddress"></label>
+							</div>
+						</div>
+						<div class="weui-flex">
+							<span>客户电话</span>
+							<div class="detail_cut_div">
+								<label id="custtel"></label>
+							</div>
+						</div>
+						<div class="weui-flex">
+							<span>销单余额</span>
+							<div class="detail_cut_div">
+								<label id="moneyleft" style='color: #FF6600;'></label>元
+							</div>
+						</div>
+						<div class="weui-flex">
+							<span>送货日期</span>
+							<div class="detail_cut_div">
+								<label id="senddate"></label><label id="sendtime"></label><label class="highe_22"></label>
+							</div>
+						</div>
+						<div class="weui-flex">
+							<div class="weui-flex__item">
+								<span>销售类型</span>
+								<div class="detail_cut_div">
+									<label id="ordertype"></label>
+								</div>
+							</div>
+							<div class="weui-flex__item">
+								<span>销售门店</span>
+								<div class="detail_cut_div">
+									<label id="shop"></label>
+								</div>
+							</div>
+						</div>
+						<div class="weui-flex">
+							<div class="weui-flex__item">
+								<span>销单品牌</span>
+								<div class="detail_cut_div">
+									<label id="orderbrand"></label>
+								</div>
+							</div>
+							<div class="weui-flex__item">
+								<span>设计师</span>
+								<div class="detail_cut_div">
+									<label id="designer"></label>
+								</div>
+							</div>
+						</div>
+						<div class="weui-flex">
+							<div class="weui-flex__item">
+								<span>销单营销</span>
+								<div class="detail_cut_div">
+									<label id="employeename"></label><label class="highe_22"></label>
+								</div>
+							</div>
+							<div class="weui-flex__item">
+								<span>销单经办</span>
+								<div class="detail_cut_div">
+									<label id="repairname"></label>
+								</div>
+							</div>
+						</div>
+						<div class="weui-flex">
+							<div class="weui-flex__item">
+								<span>项目经理</span>
+								<div class="detail_cut_div">
+									<label id="n1"></label><label class="highe_22"></label>
+								</div>
+							</div>
+							<div class="weui-flex__item">
+								<span>现场联系</span>
+								<div class="detail_cut_div">
+									<label id="n2"></label>
+								</div>
+							</div>
+						</div>
+
+						<div class="weui-flex">
+							<span>备注信息</span>
+							<div class="detail_cut_div">
+								<label id="orderothers"></label><label class="highe_22"></label>
+							</div>
+						</div>
+
+					</div>
+					<div id="detail_list_content" class="posit_relat">
+						<!--<div class="detail_list_page">
+							<div class="weui-flex">
+								<label></label> #
+								<label></label>
+							</div>
+							<div class="weui-flex">
+								<div class="width_all">
+									<div class="float_rt">
+										<label></label>片x
+										<label></label>元/片x
+										<label></label>%=
+										<label style="color: #FF6600;"></label>元
+									</div>
+								</div>
+							</div>
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<span>品牌:</span>
+									<div class="detail_list_shop">
+										<label></label>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<span>系列:</span>
+									<div class="detail_list_shop">
+										<label></label>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<span>等级:</span>
+									<div class="detail_list_shop">
+										<label></label>
+									</div>
+								</div>
+							</div>
+							<div class="weui-flex">
+								<div class="" style="width:33.3%">
+									<span>尺寸:</span>
+									<div class="detail_list_shop">
+										<label></label>x<label></label>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<span>仓库:</span>
+									<div class="detail_list_shop">
+										<label></label>
+									</div>
+								</div>
+							</div>
+							<div class="weui-flex">
+								<div class="weui-flex__item">
+									<span>备注:</span>
+									<div class="detail_list_shop">
+										<label></label>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<span>出库:</span>
+									<div class="detail_list_shop">
+										<label></label>
+									</div>
+								</div>
+								<div class="weui-flex__item">
+									<span>退货:</span>
+									<div class="detail_list_shop">
+										<label></label>
+									</div>
+								</div>
+							</div>
+						</div>-->
+					</div>
+					<div class="shop_detail_btn padding_15">
+						<a id="back_sale" href="javascript:;" class="weui-btn weui-btn_primary">进入开单</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+	<!--jquery+weui-->
+	<script src="s_js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/m_report_pub.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/m_saledetail.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

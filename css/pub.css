@@ -1,0 +1,330 @@
+body {
+	color: #666666;
+	background-color: #f8f8f8;
+}
+
+* {
+	font-family: "微软雅黑";
+}
+
+/*多项目使用。不能随意修改，可以添加，命名不重复即可*/
+/*文本*/
+
+.text_size_12 {
+	font-size: 12px;
+}
+
+.text_size_13 {
+	font-size: 13px;
+}
+
+.text_size_14 {
+	font-size: 14px;
+}
+
+.text_size_15 {
+	font-size: 15px;
+}
+
+.text_size_16 {
+	font-size: 16px;
+}
+
+.text_size_17 {
+	font-size: 17px;
+}
+
+.text_size_18 {
+	font-size: 18px;
+}
+
+.text_color_span {
+	color: #AAAAAA;
+}
+
+.text_color_major {
+	color: #5F646E;
+}
+
+.text_color_gray {
+	color: #888888;
+}
+
+.text_color_red {
+	color: red;
+}
+
+.text_color_price {
+	color: #FF6600;
+}
+
+.text_color_black {
+	color: #222222;
+}
+
+.text_color_green {
+	color: #1AAD19;
+}
+
+.text_color_white {
+	color: white;
+}
+
+
+/*间距*/
+
+.padding_lt_10 {
+	padding-left: 10px;
+}
+.padding_1p{
+	padding: 1px;
+}
+
+.padding_3p{
+	padding: 3px;
+}
+
+.padding_5 {
+	padding: 5px;
+}
+
+.padding_8p{
+	padding: 8px;
+}
+
+.padding_10 {
+	padding: 6px;
+}
+
+.padding_10p {
+	padding: 10px;
+}
+
+.padding_15 {
+	padding: 15px;
+}
+
+.padding_btm_5p {
+	padding-bottom: 5px;
+}
+
+
+
+.mag_auto {
+	margin: auto;
+}
+
+.one_text_mag {
+	margin-left: 16px;
+}
+
+.text_mag_lt_loss20 {
+	margin-left: -20px;
+}
+
+.text_mag_lt_add5 {
+	margin-left: 5px;
+}
+
+.mag_lt_10p {
+	margin-left: 10px;
+}
+
+.mag_lt_-1p {
+	margin-left: -1px;
+}
+
+.mag_lt_-5p {
+	margin-left: -5px;
+}
+
+.mag_lt_-10p {
+	margin-left: -10px;
+}
+
+.mag_top_-13p {
+	margin-top: -13px;
+}
+
+.mag_top_-15p {
+	margin-top: -15px;
+}
+
+.mag_lt_0 {
+	margin-left: 0 !important;
+}
+
+.mag_lt_5 {
+	margin-left: 5%;
+}
+
+.mag_lt_5p {
+	margin-left: 5px;
+}
+
+.mag_lt_10 {
+	margin-left: 10%;
+}
+
+.mag_rt_0 {
+	margin-right: 0 !important;
+}
+
+.mag_rt_5p {
+	margin-right: 5px;
+}
+
+.mag_rt_10p {
+	margin-right: 10px;
+}
+
+.text_mag_rt_add5 {
+	margin-right: 5px;
+}
+
+.mag_top_20 {
+	margin-top: 20%;
+}
+
+.mag_top_2p {
+	margin-top: 2px;
+}
+
+.mag_top_0 {
+	margin-top: 0;
+}
+
+.mag_top_5 {
+	margin-top: 5px;
+}
+
+.mag_top_8p {
+	margin-top: 8px;
+}
+
+.mag_top_up10 {
+	margin-top: -10px;
+}
+
+.mag_top_up12 {
+	margin-top: -12px;
+}
+
+.mag_top_15p {
+	margin-top: 15px;
+}
+
+.mag_top_100p {
+	margin-top: 100px;
+}
+
+.mag_top_dow10 {
+	margin-top: 10px;
+}
+
+.mag_btm_2p {
+	margin-bottom: 2px;
+}
+
+.mag_btm_5p {
+	margin-bottom: 5px;
+}
+
+.mag_btm_10p {
+	margin-bottom: 10px;
+}
+
+/*定位*/
+.posit_flix {
+	position: fixed;
+}
+
+.posit_absolute{
+	position: absolute;
+}
+
+.posit_relat{
+	position: relative;
+}
+
+/*行距*/
+
+.lin_highe_2 {
+	line-height: 2;
+}
+
+
+/*宽度*/
+
+.width_all {
+	width: 100%;
+}
+
+.width_50 {
+	width: 50%;
+}
+
+.width_55 {
+	width: 55%;
+}
+
+
+/*层级*/
+
+.z-index_0 {
+	z-index: 0;
+}
+
+
+/*浮动*/
+
+.float_lt {
+	float: left;
+}
+
+.float_rt {
+	float: right;
+}
+
+.text_align_left{
+	text-align: left;
+}
+
+.text_align_center {
+	text-align: center;
+}
+
+
+/*块*/
+
+.dispy_block {
+	display: block;
+}
+
+
+/*划线取消*/
+
+.border_bottom_none {
+	border-bottom: none !important;
+}
+
+.border_none {
+	border: none !important;
+}
+
+
+/*隐藏*/
+
+.cont_dispy_none {
+	display: none;
+}
+
+
+/*两端对齐*/
+
+.text_justify_align {
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}

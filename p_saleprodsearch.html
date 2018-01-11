@@ -1,0 +1,212 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>销售商品搜索</title>
+		<link rel="stylesheet" type="text/css" href="s_css/weui/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/sales_style.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/pub.css" />
+	</head>
+
+	<body>
+		<div class="weui-tab">
+			<!--nav-->
+			<div class="weui-navbar merchant_nav_fixed">
+				<div class="weui-flex width_all">
+					<div class="weui-flex__item">
+						<img id="back_home" class="merchant_nav_back mian_list" src="img/pub_back.png" />
+					</div>
+					<div class="weui-flex__item merchant_nav_title2 mag_btm_5p mian_list">
+						<label class="title_lt back_home">主目录</label>
+					</div>
+				</div>
+			</div>
+			<!--search-->
+			<div class="merchant_search_style">
+				<div class="weui-cells padding_1p">
+					<div class="weui-cell weui-cell_select">
+						<div class="weui-search-bar morderlist_search_edit" id="searchBar">
+							<div class="weui-search-bar__form">
+								<div class="weui-search-bar__box">
+									<i class="weui-icon-search"></i>
+									<input type="search" class="weui-search-bar__input" id="searchInput" placeholder="输入你要查找的商品" required="">
+									<a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+								</div>
+								<label class="weui-search-bar__label" id="searchText">
+      								<i class="weui-icon-search"></i>
+     								<span>输入你要查找的商品</span>
+    							</label>
+							</div>
+						</div>
+						<button href="javascript:" class="text_color_green" id="search_shop">查找</button>
+					</div>
+				</div>
+				<!--下拉菜单-->
+				<div class="menudown_list">
+					<dl class="topmenu">
+						<dt>
+						<div class="selectlist">
+							<div class="select_textdiv nav_drop_hide">
+								<input class="copy_brand valtext" type="hidden" value="全部品牌"/>
+								<span id="brand" class="s_text nav_drop_hide">全部品牌</span>
+							</div>
+							<div class="select_textul" style="margin-top: 4px;">
+								<ul class="alldbbrand select_first_ul">
+									<li class="focusli">全部品牌</li>
+								</ul>
+							</div>
+						</div>	
+					</dt>
+						<dt>
+						<div class="selectlist">
+							<div class="select_textdiv">
+								<input class="copy_series valtext" type="hidden" value="全部系列"/>
+								<span id="series" class="s_text nav_drop_hide">全部系列</span>
+							</div>
+							<div class="select_textul" style="margin-top: 4px;">
+								<ul class="alldbseries select_first_ul">
+									<li class="focusli">全部系列</li>
+								</ul>
+							</div>
+						</div>	
+					</dt>
+						<!--<dt>	
+						<div class="selectlist">
+							<div class="select_textdiv">
+								<input class="copy_all" type="hidden" value="筛选"/>
+								<span id="all" class="s_text">筛选</span>
+							</div>
+							<div class="select_textul">
+								<ul class="select_first_ul">
+									<li>筛选</li>
+								</ul>
+							</div>
+						</div>	
+					</dt>-->
+						<dt>
+						<div class="selectlist border_none">
+							<div class="select_div">
+								<a id="shop_sale">售货车<label id="shop_list_num" style='color: #FF6600;'></label></a>
+							</div>
+						</div>	
+					</dt>
+					</dl>
+				</div>
+			</div>
+			<a href="javascript:;" class="picker-button">
+				<div id="overlay" class="weui-popup__overlay cont_dispy_none" style="opacity: 1;z-index: 0;"></div>
+			</a>
+			<!--list-->
+			<div class="weui-tab__bd">
+				<div class="login_tip weui-tab__bd-item weui-tab__bd-item--active">
+					<!--填充-->
+					<div id="sales_list_content" class="sales_list_content detail_hd_top">
+						<!--<a class="open-popup" data-target="#detail_from" href="javascript:;">
+							<div class="sales_list_box float_lt">
+								<ul class="ul_style_list">
+									<li class="li_drop_hide text_li_hd">ABC10001ABC1101C啊啊啊啊啊啊速度速度Caaa</li>
+									<li class="li_drop_hide text_li">品牌<label class="lable_text_li">抛光砖</label></li>
+									<li class="li_drop_hide text_li">规格<label class="lable_text_li">800*800</label></li>
+									<li class="li_drop_hide text_li">系列<label class="lable_text_li">釉面砖</label></li>
+								</ul>
+							</div>
+						</a>-->
+					</div>
+					<div id="login_up" class="weui-loadmore">
+						<i class="weui-loading"></i>
+						<span class="weui-loadmore__tips">正在加载</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="detail_from" class="weui-popup__container popup-bottom">
+			<a href="javascript:;" class="picker-button close-popup">
+				<div class="weui-popup__overlay"></div>
+			</a>
+			<div class="weui-popup__modal text_black">
+				<div class="toolbar detail_modal_hd">
+					<div class="toolbar-inner">
+						<div class="detail_code_text"><span class="text_color_gray">产品编码：</span><label id="prodcode"></label> </div>
+					</div>
+				</div>
+				<div class="modal-content">
+					<div class="weui-grids" style="padding-top: 1px;">
+						<div class="weui-media-box__desc detail_magrin">
+							<div class="weui-flex text_size_14">
+								<div class="weui-flex__item">
+									<span>规格:</span>
+									<label id="prodspecs" class="detail_text_rt text_color_black"></label>
+								</div>
+								<div class="weui-flex__item">
+									<span>品牌:</span>
+									<label id="prodbrand" class="detail_text_rt text_color_black"></label>
+								</div>
+								<div class="weui-flex__item">
+									<span>系列:</span>
+									<label id="prodseries" class="detail_text_rt text_color_black"></label>
+								</div>
+							</div>
+							<div class="weui-flex text_size_13 detail_text_top">
+								<div class="weui-flex__item">
+									色号：<input id="color_num" type="text" class="popup_input" maxlength="10"/>
+								</div>
+								<div class="weui-flex__item">
+									<div class="dbstor_mag">仓位：</div>
+									<label id="dbstorename_text" class="popup_input select_lable"></label>
+									<select id="dbstorename" class="select_own">
+										<option>选择</option>
+									</select>
+								</div>
+							</div>
+							<div class="weui-flex detail_text_top">
+								<div class="weui-flex__item ">
+									单价：<input id="prodpriceout" type="text" class="popup_input" onkeyup="clearNoNum(this)"/>
+								</div>
+								<div class="weui-flex__item">
+									折扣：<input id="discount" type="text" value="100" class="popup_input width_55" onkeyup="clearNoNum(this)"/>%
+								</div>
+							</div>
+							<div class="weui-flex detail_text_top">
+								<div class="weui-flex weui-flex__item ">
+									<div class="mag_top_2p">数量：</div>
+									<i id="remove" class="detail_remove"></i>
+									<input id="sale_number" type="number" pattern="[0-9]*" class="detail_input detail_width_30 text_size_15" value="1" onkeyup="clearNoNum_2(this)"/>
+									<i id="addOne" class="detail_add detail_magrin_right"></i>
+									<div class="mag_top_2p">片</div>
+								</div>
+								<div class="weui-flex__item mag_top_2p">
+									金额：<label id="detail_price" type="text" class="text_color_black mag_rt_5p">1121</label>元
+								</div>
+							</div>
+							<div class="weui-flex detail_text_top">
+								<div class="weui-flex__item">
+									<label class="float_lt mag_top_5">备注：</label>
+									<div class="other_box">
+										<input id="other" type="text" class="popup_input other_box_input" maxlength="30"/>
+										<img id="other_select" src="img/arrow_dow.png" class="other_box_img" />
+										<select id="other_select_list" class="other_box_select">
+											<option>选择</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="weui-form-preview__ft detail_text_top">
+							<a id="shop_end" class="weui-form-preview__btn weui-form-preview__btn_default btn_end">完成开单</a>
+							<a id="shop_one_add" class="weui-form-preview__btn weui-form-preview__btn_primary btn_add">加入销售车</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="s_js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/m_report_pub.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/m_saleprodsearch.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

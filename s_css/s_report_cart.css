@@ -1,0 +1,190 @@
+.weui-panel__hd:after {
+	left: 0 !important;
+}
+
+.weui-animate-fade-in {
+	-webkit-animation: c ease .3s forwards !important;
+	animation: c ease .3s forwards !important;
+}
+
+.weui-mask,
+.weui-mask_transparent {
+	position: fixed !important;
+	z-index: 1000 !important;
+	top: 0 !important;
+	right: 0 !important;
+	left: 0 !important;
+	bottom: 0 !important;
+}
+
+.weui-mask {
+	background: rgba(0, 0, 0, .6) !important;
+	visibility: visible;
+}
+
+.time_btn {
+	border-radius: 80px;
+	border: 1px solid #AAAAAA;
+	background: white;
+	color: #C0BFC4;
+	width: 80px;
+}
+
+.time_btn_click {
+	border: 0px solid #AAAAAA;
+	background: #3CC51F;
+	color: white;
+	pointer-events: none;
+}
+
+.timedata_padding {
+	padding: 20px 20px 20px 20px;
+}
+
+.data_count {
+	background-color: #F4F4F4;
+}
+
+.chart_data {
+	width: 100%;
+	height: 500px;
+}
+
+.img_down {
+	width: 10px;
+	height: 10px;
+	margin-top: -17px;
+	margin-right: 18%;
+	/*background-image: url(../img/down.png);*/
+}
+
+.panel_padd {
+	padding: 10px 0px 5px 0px !important;
+}
+
+.back_btn {
+	width: 45px;
+	height: 25px;
+}
+
+
+/*todaysale*/
+
+.weui-form-preview__item>label {
+	font-size: 16px;
+	color: #000000;
+}
+
+.weui-form-preview__value>label {
+	font-size: 17px;
+	font-weight: 500;
+	color: #179B16;
+}
+
+.weui-form-preview__value>a {
+	font-size: 18px;
+	font-weight: 500;
+	color: #5F646E;
+}
+
+.unit_style {
+	margin-left: 5px;
+	font-size: 13px;
+	color: #9B9B9B;
+}
+
+.btn_mag {
+	margin: 0 10px;
+}
+
+#alternatecolor {
+	margin: 5px;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color: #000000;
+	border-width: 1px;
+	border-color: #333333;
+	border-collapse: collapse;
+}
+
+.altrowstable_th,
+.altrowstable_td {
+	font-weight: 100;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	text-align: center;
+	width: 28vw;
+	height: 30px;
+}
+
+.altrowstable_th_1 {
+	width: 15vw !important;
+}
+
+.altrowstable_td {
+	font-weight: 300 !important;
+	color: #000000 !important;
+}
+
+.evenrowcolor {
+	background-color: #F4F4F4;
+}
+
+.chart_btn_box a {
+	text-decoration: none;
+	color: #888888;
+	;
+}
+
+.chart_btn_box {
+	padding: 0 2% 0 0%;
+	overflow: hidden;
+	color: #888888;
+}
+
+.chart_flex_left,
+.chart_flex_right {
+	display: flex;
+	width: 48%;
+	height: 55px;
+	border: 1px solid #d9d9d9;
+	border-radius: 10px;
+	box-sizing: border-box;
+	background-color: white;
+	word-break: break-all;
+	float: left;
+	margin-top: 2%;
+	margin-left: 2%;
+}
+
+.chart_logo {
+	display: flex;
+	flex-direction: column;
+	height: 25px;
+	width: 25px;
+	padding: 3px 0px 0px 3px;
+	text-align: center;
+}
+
+.chart_img {
+	background-size: 16px 16px;
+	margin: 3px 0px 0px 2px;
+	width: 16px;
+	height: 16px;
+}
+
+.chart_num {
+	margin-top: 1px;
+	margin-left: -3px;
+}
+
+.chart_title {
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-right: 0;
+	right: 0;
+	word-break: break-all;
+	line-height: 1.4;
+	float: left;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="description" content="ECharts, a powerful, interactive charting and visualization library for browser">
+		<title>日收款分析</title>
+		<link rel="stylesheet" type="text/css" href="s_css/weui/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/jquery-weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/pub.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/s_report_cart.css" />
+		<link rel="stylesheet" type="text/css" href="s_css/sales_style.css" />
+	</head>
+ 
+	<body>
+		<!--tab-->
+		<div class="weui-tab">
+			<!--nav-->
+			<div class="weui-navbar merchant_nav_fixed">
+				<div class="weui-flex width_all">
+					<div class="weui-flex__item">
+						<img class="merchant_nav_back mian_list back_home" src="img/pub_back.png" />
+					</div>
+					<div class="weui-flex__item merchant_nav_title2 mag_btm_5p mian_list">
+						<label class="title_lt back_home">主目录</label>
+					</div>
+				</div>
+			</div>
+			<div class="weui-tab__bd">
+				<div class="weui-tab__bd-item weui-tab__bd-item--active mag_top_-13p">
+					<div class="weui-panel weui-panel_access">
+						<div class="weui-panel__hd text_size_16 text_color_black text_bold panel_padd cont_dispy_none">
+							<img src="img/pub_back.png" class="back_btn">
+							<label class="mag_lt_-10p posit_flix">日收款分析</label>
+						</div>
+						<div class="weui-panel__bd">
+							<div class="weui-flex text_align_center timedata_padding">
+								<div class="weui-flex__item day_sale">
+									<a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default time_btn day_sale">今日</a>
+								</div>
+								<div class="weui-flex__item week_sale">
+									<a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default time_btn week_sale">近7天</a>
+								</div>
+								<div class="weui-flex__item month_sale">
+									<a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default time_btn month_sale">近30天</a>
+								</div>
+							</div>
+							<div class="weui-flex text_align_center padding_btm_10p padding_btm_20p">
+								<div class="weui-flex__item">
+									<input id="paydatef_s_input" class="weui-input text_align_center float_lt" type="text" readonly="">
+									<img class="float_rt img_down paydatef_s_input" src="img/down.png" />
+								</div>
+								<span class="text_color_span text_size_15">到</span>
+								<div class="weui-flex__item">
+									<input id="paydatet_s_input" class="weui-input text_align_center float_lt" type="text" readonly="">
+									<img class="float_rt img_down paydatet_s_input" src="img/down.png" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+					<div class="weui-panel__hd data_count text_size_15 padding_10">
+						<label class="mag_lt_10p">共<span id="peop_num">?</span>天</label>
+						<label class="float_rt mag_rt_10p"><span id="price_num">?</span>元</label>
+					</div>
+					<div class="weui-panel_access">
+						<div id="chart" class="chart_data "></div>
+					</div>
+					<div class="weui-panel_access">
+						<table class="altrowstable" id="alternatecolor">
+
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="s_js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/jquery-weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/weui/weui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/echarts.common.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/m_day_pay.js" type="text/javascript" charset="utf-8"></script>
+	<script src="s_js/m_report_pub.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

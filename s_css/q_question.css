@@ -1,0 +1,142 @@
+/*questionlist*/
+
+.circle-list>.li_border {
+	background-color: white;
+	/*padding: 0.4em;*/
+	border-top: 1px solid #e5e5e5;
+	box-sizing: border-box;
+	/*border-bottom: 1px solid #e5e5e5;
+	margin-top: 5px !important;*/
+}
+
+.question {
+	padding: 0.4em;
+}
+
+.circle-list>.li_border>.question {
+	font-family: "微软雅黑";
+	font-weight: normal;
+	font-size: 17px;
+	color: #000000;
+}
+
+.answer_list {
+	overflow: auto;
+	background-color: #f8f8f8;
+	border-top: 1px #e5e5e5 solid;
+	font-size: 15px;
+	padding-left: 10px;
+}
+
+.border_hight {
+	/*border: 1px dashed #cc9d10 !important;*/
+}
+
+.answer_list_focus {
+	-moz-transform: scale(1.3, 1.3);
+	-webkit-transform: scale(1.3, 1.3);
+	-o-transform: scale(1.3, 1.3);
+	transform: scale(1.3, 1.3);
+	color: #fd0101;
+}
+
+.rem_btn,
+.add_btn {
+	margin-top: 5px;
+	float: right;
+	display: block;
+	width: 15px;
+	height: 15px;
+}
+
+.add_btn {
+	background-image: url(../img/down.png);
+}
+
+.rem_btn {
+	background-image: url(../img/up.png);
+}
+
+.circle-list {
+	/*border-bottom: 1px solid #e5e5e5;*/
+}
+
+.hide_list {
+	display: none;
+}
+
+.share_link {
+	text-align: center;
+	font-family: "微软雅黑";
+	width: 100%;
+	position: relative;
+	display: block;
+	float: right;
+	font-size: 15px;
+	color: #319ABD;
+	text-decoration: underline;
+	margin: 20px 0 10px 0;
+}
+
+.img_zan {
+	margin-top: 7px;
+	float: left;
+	display: block;
+	margin-right: 2px;
+	width: 14px;
+	height: 14px;
+}
+
+.share_link>a {
+	background-color: white;
+	/*color: #319ABD;*/
+}
+
+.share_link>a+a {
+	margin-left: 15%;
+}
+
+.btn_bottom {
+	background-color: white;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	padding: 5px;
+	border-right: 1px solid #E5E5E5;
+}
+
+.question_detail {
+	padding: 10px 15px;
+}
+
+.questin_title {
+	font-size: 17px;
+	font-weight: bold;
+	color: #000000;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #E5E5E5;
+	margin-bottom: 5px;
+}
+
+.ask_color {
+	color: #545252;
+}
+
+.questin_content {
+	margin-top: 10px;
+	font-size: 16px;
+	color: #000000;
+}
+
+.over_liny {
+	text-align: center;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	z-index: 1000;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 0;
+}
